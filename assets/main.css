@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: orange;
+    --color-text: black;
+    --color-text-alt: #666;
+    --color-bg-primary: white;
+    --color-bg-secondary: #ddd;
+    --content-padding: 10%;
+    --content-max-width: 1480px
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-bg-primary);
+}
+
+main {
+    margin-top: 6rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h1 span, h2 span, h3 span, h4 span {
+    color: var(--color-primary);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: inherit;
+}
+
+button, a {
+    cursor: pointer;
+    transition: opacity 200ms;
+}
+
+button:hover, a:hover {
+    opacity: .5;
+}
+
+.primary-btn, .outline-btn {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 1.5rem;
+    border-radius: .25rem;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.outline-btn {
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --content-padding: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.25rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+}
