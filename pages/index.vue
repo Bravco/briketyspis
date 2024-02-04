@@ -1,9 +1,10 @@
 <template>
     <div>
-        <canvas id="canvas3d"/>
+        <!--<canvas id="canvas3d"/>-->
         <Hero/>
         <Info :pallet-price="PALLET_PRICE_EUR" :package-price="PACKAGE_PRICE_EUR"/>
         <Contact :pallet-price="PALLET_PRICE_EUR" :package-price="PACKAGE_PRICE_EUR"/>
+        <Newsletter/>
     </div>
 </template>
 

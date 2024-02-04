@@ -11,13 +11,13 @@
                         <NuxtLink :to="{ path: '/', hash: '#info'}">Informácie</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="">Kontakt</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#kontakt'}">Kontakt</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="">Novinky</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#novinky'}">Novinky</NuxtLink>
                     </li>
                 </ul>
-                <NuxtLink class="primary-btn">
+                <NuxtLink class="primary-btn" :to="{ path: '/', hash: '#kontakt'}">
                     <Icon name="majesticons:lightning-bolt"/>
                     Objednaj
                 </NuxtLink>
@@ -37,10 +37,10 @@
                         <NuxtLink :to="{ path: '/', hash: '#info'}">Informácie</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="">Kontakt</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#kontakt'}">Kontakt</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="">Novinky</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#novinky'}">Novinky</NuxtLink>
                     </li>
                 </ul>
                 <NuxtLink to="tel:+421948121289">
