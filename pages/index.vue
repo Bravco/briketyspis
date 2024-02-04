@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!--<canvas id="canvas3d"/>-->
+        <canvas id="canvas3d"/>
         <Hero/>
         <Info :pallet-price="PALLET_PRICE_EUR" :package-price="PACKAGE_PRICE_EUR"/>
         <Contact :pallet-price="PALLET_PRICE_EUR" :package-price="PACKAGE_PRICE_EUR"/>
@@ -57,6 +57,16 @@
                     })
                     .to(cube.position, { x: -260, y: -90 }, 0)
                     .to(cube.scale, { x: 1, y: 1, z: 1 }, 0);
+
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: "#kontakt",
+                            start: "bottom center",
+                            endTrigger: "#novinky",
+                            end: "bottom bottom",
+                            scrub: true,
+                        },
+                    }).to(cube.position, { x: 260, y: 90 }, 0);
                 }
             });
         }

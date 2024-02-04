@@ -93,6 +93,35 @@ input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 2rem var(--color-background-primary) inset !important;
 }
 
+.inputfield {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.inputfield label {
+    position: absolute;
+    top: 50%;
+    left: .75rem;
+    padding-inline: .25rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    opacity: .75;
+    transition-property: top, font-size, background-color, opacity;
+    transition-duration: 300ms;
+}
+
+.inputfield:has(input:focus) label,
+.inputfield:has(input:not(:placeholder-shown)) label,
+.inputfield:has(select:focus) label,
+.inputfield:has(select:not(:placeholder-shown)) label {
+    top: 0;
+    font-size: .75rem;
+    background-color: var(--color-bg-primary);
+    opacity: 1;
+}
+
 .icon {
     font-size: 1.25rem;
 }

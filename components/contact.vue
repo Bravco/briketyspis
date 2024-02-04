@@ -52,7 +52,7 @@
                         Vaša objednávka bola úspešne odoslaná.<br>
                         <b>Budeme Vás kontaktovať emailom alebo telefonicky.</b>
                     </span>
-                    <div v-if="!success" class="contact-form-footer wide">
+                    <div v-else class="contact-form-footer wide">
                         <span class="price">~{{ estPrice.toFixed(2) }} €</span>
                         <button class="primary-btn wide" type="submit" :disabled="loading">
                             <Icon :name="loading ? 'eos-icons:loading' : 'majesticons:mail'" size="1.25rem"/>
@@ -129,9 +129,8 @@
     #kontakt {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        place-items: center;
+        align-items: center;
         gap: 4rem;
-        position: relative;
     }
 
     .content {
@@ -151,6 +150,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 1rem;
         margin-top: 1rem;
     }
 
@@ -160,43 +160,10 @@
         color: var(--color-primary);
     }
 
-    .inputfield {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
-
-    .inputfield label {
-        position: absolute;
-        top: 50%;
-        left: .75rem;
-        padding-inline: .25rem;
-        transform: translateY(-50%);
-        font-size: 1rem;
-        pointer-events: none;
-        opacity: .75;
-        transition-property: top, font-size, background-color, opacity;
-        transition-duration: 300ms;
-    }
-
-    .inputfield:has(input:focus) label,
-    .inputfield:has(input:not(:placeholder-shown)) label,
-    .inputfield:has(select:focus) label,
-    .inputfield:has(select:not(:placeholder-shown)) label {
-        top: 0;
-        font-size: .75rem;
-        background-color: var(--color-bg-primary);
-        opacity: 1;
-    }
-
     .wide {
         grid-column: span 2;
     }
-
-    button[type="submit"] {
-        width: 50%;
-    }
-
+    
     .success {
         text-align: center;
         color: var(--color-success);
@@ -213,6 +180,11 @@
 
         .inputfield {
             grid-column: span 2;
+        }
+
+        .contact-form-footer {
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         button[type="submit"] {
