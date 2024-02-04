@@ -23,12 +23,13 @@
         if (canvas) {
             const spline = new Application(canvas);
             spline.load("https://prod.spline.design/U4ebnhzLermBzsVJ/scene.splinecode").then(() => {
-                const cube = spline.findObjectByName("Cube");
+                const object = spline.findObjectByName("Object");
+                const xTranslate = 400;
                 
-                if (cube) {
-                    gsap.set(cube.position, { x: 260, y: 90 })
+                if (object) {
+                    gsap.set(canvas, { x: xTranslate });
 
-                    gsap.to(cube.rotation, {
+                    gsap.to(object.rotation, {
                         y: Math.PI * 2,
                         repeat: -1,
                         duration: 30,
@@ -43,8 +44,8 @@
                             scrub: true,
                         },
                     })
-                    .to(cube.position, { x: 0, y: 0 }, 0)
-                    .to(cube.scale, { x: 1.2, y: 1.2, z: 1.2 }, 0);
+                    .to(canvas, { x: -50 }, 0)
+                    .to(object.scale, { x: 1.2, y: 1.2, z: 1.2 }, 0);
 
                     gsap.timeline({
                         scrollTrigger: {
@@ -55,8 +56,8 @@
                             scrub: true,
                         },
                     })
-                    .to(cube.position, { x: -260, y: -90 }, 0)
-                    .to(cube.scale, { x: 1, y: 1, z: 1 }, 0);
+                    .to(canvas, { x: -xTranslate }, 0)
+                    .to(object.scale, { x: 1, y: 1, z: 1 }, 0);
 
                     gsap.timeline({
                         scrollTrigger: {
@@ -66,7 +67,7 @@
                             end: "bottom bottom",
                             scrub: true,
                         },
-                    }).to(cube.position, { x: 260, y: 90 }, 0);
+                    }).to(canvas, { x: xTranslate }, 0);
                 }
             });
         }
