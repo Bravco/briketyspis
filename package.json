@@ -14,5 +14,9 @@
     "nuxt-icon": "^0.6.8",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@splinetool/runtime": "^1.0.47",
+    "gsap": "^3.12.5"
   }
 }

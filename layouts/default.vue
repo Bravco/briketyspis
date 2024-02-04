@@ -5,17 +5,21 @@
                 <Logo/>
                 <ul class="nav-list">
                     <li>
-                        <NuxtLink to="">Domov</NuxtLink>
+                        <NuxtLink to="/">Domov</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="">Informácie</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#info'}">Informácie</NuxtLink>
                     </li>
                     <li>
                         <NuxtLink to="">Kontakt</NuxtLink>
                     </li>
+                    <li>
+                        <NuxtLink to="">Novinky</NuxtLink>
+                    </li>
                 </ul>
                 <NuxtLink class="primary-btn">
-                    Call to Action
+                    <Icon name="majesticons:lightning-bolt"/>
+                    Objednaj
                 </NuxtLink>
             </nav>
         </header>
@@ -27,30 +31,24 @@
                 <Logo/>
                 <ul class="footer-nav-list">
                     <li>
-                        <NuxtLink to="">Domov</NuxtLink>
+                        <NuxtLink to="/">Domov</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="">Informácie</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#info'}">Informácie</NuxtLink>
                     </li>
                     <li>
                         <NuxtLink to="">Kontakt</NuxtLink>
                     </li>
-                </ul>
-                <ul class="footer-social-list">
-                    <li class="footer-social-link">
-                        <NuxtLink to="">
-                            <Icon name="arcticons:bazos"/>
-                        </NuxtLink>
-                    </li>
-                    <li class="footer-social-link">
-                        <NuxtLink to="">
-                            <Icon name="heroicons:phone"/>
-                        </NuxtLink>
+                    <li>
+                        <NuxtLink to="">Novinky</NuxtLink>
                     </li>
                 </ul>
+                <NuxtLink to="tel:+421948121289">
+                    <strong><u>+421 948 121 289</u></strong>
+                </NuxtLink>
             </div>
             <hr>
-            <p>&copy; {{ new Date().getFullYear() }} | Vytvoril <NuxtLink to="https://hamracek.dev">Andrej Hamráček</NuxtLink></p>
+            <p>&copy; {{ new Date().getFullYear() }} | Vytvoril <NuxtLink to="https://hamracek.dev" target="_blank"><u>Andrej Hamráček</u></NuxtLink></p>
         </footer>
     </div>
 </template>
@@ -59,6 +57,7 @@
     nav, main, footer {
         max-width: var(--content-max-width);
         margin: auto;
+        padding-inline: 2rem;
     }
 
     nav {
@@ -108,26 +107,19 @@
         gap: 2rem;
     }
 
-    .footer-social-list {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .footer-social-link {
-        font-size: 1.25rem;
-    }
-
-    @media only screen and (max-width: 576px) {
-        nav {
+    @media only screen and (max-width: 768px) {
+        nav, .footer-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        .nav-list {
+        .nav-list, .footer-nav-list {
+            justify-content: flex-start;
+            row-gap: 0;
             flex-wrap: wrap;
-            gap: 1rem;
         }
     }
 </style>
