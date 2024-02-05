@@ -118,8 +118,13 @@
 
         .nav-list, .footer-nav-list {
             justify-content: flex-start;
+            gap: 1rem;
             row-gap: 0;
             flex-wrap: wrap;
+        }
+
+        nav .primary-btn {
+            display: none;
         }
     }
 </style>

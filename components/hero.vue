@@ -52,5 +52,10 @@
         #domov {
             grid-template-columns: 1fr;
         }
+
+        .cta-list {
+            flex-wrap: wrap;
+            row-gap: 0;
+        }
     }
 </style>

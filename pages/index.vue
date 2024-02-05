@@ -11,7 +11,7 @@
 <script lang="ts" setup>
     import { Application } from "@splinetool/runtime";
     import gsap from "gsap";
-    import ScrollTrigger from "gsap/dist/ScrollTrigger";
+    import ScrollTrigger from "gsap/src/ScrollTrigger";
 
     const PALLET_PRICE_EUR : number = 240;
     const PACKAGE_PRICE_EUR : number = 2.50;
