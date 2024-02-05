@@ -12,7 +12,7 @@
     import { Application } from "@splinetool/runtime";
     import gsap from "gsap";
     import ScrollTrigger from "gsap/dist/ScrollTrigger";
-    
+
     const PALLET_PRICE_EUR : number = 240;
     const PACKAGE_PRICE_EUR : number = 2.50;
 
@@ -24,7 +24,7 @@
             const spline = new Application(canvas);
             spline.load("https://prod.spline.design/U4ebnhzLermBzsVJ/scene.splinecode").then(() => {
                 const object = spline.findObjectByName("Object");
-                const xTranslate = 400;
+                const xTranslate = "400";
                 
                 if (object) {
                     gsap.set(canvas, { x: xTranslate });
@@ -44,7 +44,7 @@
                             scrub: true,
                         },
                     })
-                    .to(canvas, { x: -50 }, 0)
+                    .to(canvas, { x: -20 }, 0)
                     .to(object.scale, { x: 1.2, y: 1.2, z: 1.2 }, 0);
 
                     gsap.timeline({
@@ -83,7 +83,7 @@
         z-index: -1;
     }
 
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 768px) {
         #canvas3d {
             opacity: 0;
         }

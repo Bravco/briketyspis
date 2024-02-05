@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "sk",
       },
+      title: "Brikety Spiš",
+      meta: [
+        { name: "title", content: "Brikety Spiš - Drevené Brikety RUF" },
+        { name: "description", content: "Ušetrite čas, energiu pripravovaním dreva na zimu a užívajte si bezstarostné kúrenie s drevenými briketami." },
+      ],
     },
   },
   nitro: {
