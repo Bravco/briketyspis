@@ -26,4 +26,9 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
   },
+  build: {
+    transpile: [
+      "gsap",
+    ],
+  },
 });
