@@ -45,13 +45,13 @@
                 </ul>
                 <ul class="footer-social-list">
                     <li>
-                        <NuxtLink to="tel:+421948121289"><Icon name="majesticons:phone"/></NuxtLink>
+                        <NuxtLink to="tel:+421948121289" aria-label="telefón"><Icon name="majesticons:phone"/></NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="mailto:briketyspis@gmail.com"><Icon name="majesticons:mail"/></NuxtLink>
+                        <NuxtLink to="mailto:briketyspis@gmail.com" aria-label="email"><Icon name="majesticons:mail"/></NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="https://wa.me/+421948121289" target="_blank"><Icon name="fa6-brands:whatsapp"/></NuxtLink>
+                        <NuxtLink to="https://wa.me/+421948121289" target="_blank" aria-label="whatsapp"><Icon name="fa6-brands:whatsapp"/></NuxtLink>
                     </li>
                 </ul>
             </div>
