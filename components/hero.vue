@@ -5,7 +5,7 @@
                 <h1>Drevené Brikety <span>RUF</span></h1>
                 <p class="paragraph">Ušetrite čas, energiu pripravovaním dreva na zimu a užívajte si bezstarostné kúrenie s drevenými briketami.</p>
                 <div class="cta-list">
-                    <NuxtLink class="primary-btn cta-btn" :to="{ path: '/', hash: '#kontakt'}">
+                    <NuxtLink class="primary-btn cta-btn" :to="{ path: '/', hash: '#objednavka'}">
                         Objednaj
                         <Icon name="majesticons:arrow-down"/>
                     </NuxtLink>

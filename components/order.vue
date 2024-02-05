@@ -1,9 +1,9 @@
 <template>
     <div>
-        <section id="kontakt">
+        <section id="objednavka">
             <Placeholder/>
             <div class="content">
-                <h2>Kontaktujte nás</h2>
+                <h2>Vytvoriť objednávku</h2>
                 <form class="contact-form" @submit.prevent="submit">
                     <div class="inputfield">
                         <label for="firstName">Meno</label>
@@ -126,7 +126,7 @@
 </script>
 
 <style scoped>
-    #kontakt {
+    #objednavka {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -174,7 +174,7 @@
     }
 
     @media only screen and (max-width: 768px) {
-        #kontakt {
+        #objednavka {
             grid-template-columns: 1fr;
         }
 

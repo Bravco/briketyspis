@@ -3,7 +3,7 @@
         <canvas id="canvas3d"/>
         <Hero/>
         <Info :pallet-price="PALLET_PRICE_EUR" :package-price="PACKAGE_PRICE_EUR"/>
-        <Contact :pallet-price="PALLET_PRICE_EUR" :package-price="PACKAGE_PRICE_EUR"/>
+        <Order :pallet-price="PALLET_PRICE_EUR" :package-price="PACKAGE_PRICE_EUR"/>
         <Newsletter/>
     </div>
 </template>
@@ -44,14 +44,14 @@
                             scrub: true,
                         },
                     })
-                    .to(canvas, { x: -20 }, 0)
-                    .to(object.scale, { x: 1.2, y: 1.2, z: 1.2 }, 0);
+                    .to(canvas, { x: 0 }, 0)
+                    .to(object.scale, { x: 1.1, y: 1.1, z: 1.1 }, 0);
 
                     gsap.timeline({
                         scrollTrigger: {
                             trigger: "#info",
                             start: "bottom center",
-                            endTrigger: "#kontakt",
+                            endTrigger: "#objednavka",
                             end: "bottom bottom",
                             scrub: true,
                         },
@@ -61,7 +61,7 @@
 
                     gsap.timeline({
                         scrollTrigger: {
-                            trigger: "#kontakt",
+                            trigger: "#objednavka",
                             start: "bottom center",
                             endTrigger: "#novinky",
                             end: "bottom bottom",

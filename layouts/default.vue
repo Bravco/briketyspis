@@ -11,13 +11,13 @@
                         <NuxtLink :to="{ path: '/', hash: '#info'}">Informácie</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink :to="{ path: '/', hash: '#kontakt'}">Kontakt</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#info'}">Kontakt</NuxtLink>
                     </li>
                     <li>
                         <NuxtLink :to="{ path: '/', hash: '#novinky'}">Novinky</NuxtLink>
                     </li>
                 </ul>
-                <NuxtLink class="primary-btn" :to="{ path: '/', hash: '#kontakt'}">
+                <NuxtLink class="primary-btn" :to="{ path: '/', hash: '#objednavka'}">
                     <Icon name="majesticons:lightning-bolt"/>
                     Objednaj
                 </NuxtLink>
@@ -37,15 +37,23 @@
                         <NuxtLink :to="{ path: '/', hash: '#info'}">Informácie</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink :to="{ path: '/', hash: '#kontakt'}">Kontakt</NuxtLink>
+                        <NuxtLink :to="{ path: '/', hash: '#info'}">Kontakt</NuxtLink>
                     </li>
                     <li>
                         <NuxtLink :to="{ path: '/', hash: '#novinky'}">Novinky</NuxtLink>
                     </li>
                 </ul>
-                <NuxtLink to="tel:+421948121289">
-                    <strong><u>+421 948 121 289</u></strong>
-                </NuxtLink>
+                <ul class="footer-social-list">
+                    <li>
+                        <NuxtLink to="tel:+421948121289"><Icon name="majesticons:phone"/></NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="mailto:briketyspis@gmail.com"><Icon name="majesticons:mail"/></NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="https://wa.me/+421948121289" target="_blank"><Icon name="fa6-brands:whatsapp"/></NuxtLink>
+                    </li>
+                </ul>
             </div>
             <hr>
             <p>&copy; {{ new Date().getFullYear() }} | Vytvoril <NuxtLink to="https://hamracek.dev" target="_blank"><u>Andrej Hamráček</u></NuxtLink></p>
@@ -58,6 +66,12 @@
         max-width: var(--content-max-width);
         margin: auto;
         padding-inline: 2rem;
+    }
+
+    header {
+        width: 100%;
+        position: fixed;
+        background-color: var(--color-bg-primary);
     }
 
     nav {
@@ -107,6 +121,11 @@
         gap: 2rem;
     }
 
+    .footer-social-list {
+        display: flex;
+        gap: 1.5rem;
+    }
+
     @media only screen and (max-width: 768px) {
         nav, .footer-content {
             display: flex;
@@ -116,10 +135,10 @@
             gap: 1rem;
         }
 
-        .nav-list, .footer-nav-list {
+        .nav-list, .footer-nav-list, .footer-social-list {
             justify-content: flex-start;
             gap: 1rem;
-            row-gap: 0;
+            row-gap: .5rem;
             flex-wrap: wrap;
         }
 

@@ -2,8 +2,8 @@
     <div>
         <section id="info">
             <div>
-                <h2><span><Icon name="majesticons:cube" size="2.5rem"/></span> Zloženie</h2>
-                <p><strong>Kombinácia mäkkého a tvrdého dreva</strong> spája výhody oboch typov dreva, čím zaisťuje dlhšiu dobu horenia.</p>
+                <h2><span><Icon name="majesticons:cube" size="2.5rem"/></span> Specifiká</h2>
+                <p>Brikety sú <strong>vyrobené z mäkkých a tvrdých pilín</strong>.<br><strong>Paleta brikiet nahrádza 3-5 m³ dreva.<br>Vákuové balenie, vysoká výhrevnosť, výborné uskladnenie</strong></p>
             </div>
             <Placeholder style="grid-row: span 2;"/>
             <div>
@@ -16,7 +16,18 @@
             </div>
             <div>
                 <h2><span><Icon name="majesticons:phone" size="2.5rem"/></span> Kontakt</h2>
-                <p><NuxtLink to="tel:+421948121289"><strong><u>+421 948 121 289</u></strong></NuxtLink></p>
+                <ul>
+                    <li>
+                        <NuxtLink to="tel:+421948121289"><strong><u>+421 948 121 289</u></strong></NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="mailto:briketyspis@gmail.com"><strong><u>briketyspis@gmail.com</u></strong></NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="https://wa.me/+421948121289" target="_blank"><strong><u>Whatsapp</u></strong></NuxtLink>
+                    </li>
+                </ul>
+                <p>V prípade otázok nás neváhajte kontaktovať.</p>
             </div>
         </section>
     </div>
