@@ -68,6 +68,10 @@
         padding-inline: 2rem;
     }
 
+    main {
+        padding-top: 8rem;
+    }
+
     header {
         width: 100%;
         position: fixed;
@@ -144,6 +148,12 @@
 
         nav .primary-btn {
             display: none;
+        }
+    }
+
+    @media only screen and (max-width: 216px) {
+        main {
+            padding-top: 12rem;
         }
     }
 </style>
