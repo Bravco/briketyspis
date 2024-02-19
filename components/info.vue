@@ -8,7 +8,7 @@
             <Placeholder style="grid-row: span 2;"/>
             <div>
                 <h2><span><Icon name="majesticons:star" size="2.5rem"/></span> Cena</h2>
-                <p><strong>{{ props.palletPrice?.toFixed(2) }} €</strong> ... 1 paleta (960kg)<br><strong>{{ props.packagePrice?.toFixed(2) }} €</strong> ... 1 balíček (12ks)</p>
+                <p><strong>{{ props.palletPrice?.toFixed(2) }} €</strong> ... 1 paleta (960kg)<br><strong>{{ props.packagePrice?.toFixed(2) }} €</strong> ... 1 balíček</p>
             </div>
             <div>
                 <h2><span><Icon name="majesticons:car" size="2.5rem"/></span> Dovoz</h2>
