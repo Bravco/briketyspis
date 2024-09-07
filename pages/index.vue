@@ -13,8 +13,8 @@
     import gsap from "gsap";
     import ScrollTrigger from "gsap/src/ScrollTrigger";
 
-    const PALLET_PRICE_EUR : number = 190;
-    const PACKAGE_PRICE_EUR : number = 2;
+    const PALLET_PRICE_EUR : number = 200; // 0 = remove PALLET OPTION
+    const PACKAGE_PRICE_EUR : number = 0; // 0 = remove PACKAGE OPTION
 
     gsap.registerPlugin(ScrollTrigger);
 

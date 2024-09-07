@@ -39,8 +39,8 @@
                     <div class="inputfield">
                         <label for="unit">Jednotka</label>
                         <select v-model="state.unit" name="unit" id="unit" placeholder=" " required>
-                            <option value="Balík">Balík</option>
-                            <option value="Paleta">Paleta</option>
+                            <option v-if="props.packagePrice !== 0" value="Balík">Balík</option>
+                            <option v-if="props.palletPrice !== 0" value="Paleta">Paleta</option>
                         </select>
                     </div>
                     <div class="inputfield">
