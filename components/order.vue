@@ -44,7 +44,7 @@
                         </select>
                     </div>-->
                     <div class="inputfield">
-                        <label for="unit">Dátum</label>
+                        <label for="unit">Preferovaný dátum dodania</label>
                         <input v-model="state.date" type="date" required>
                     </div>
                     <div class="inputfield">
