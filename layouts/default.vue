@@ -50,13 +50,10 @@
                     <li>
                         <NuxtLink to="mailto:briketyspis@gmail.com" aria-label="email"><Icon name="majesticons:mail"/></NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="https://wa.me/+421948121289" target="_blank" aria-label="whatsapp"><Icon name="fa6-brands:whatsapp"/></NuxtLink>
-                    </li>
                 </ul>
             </div>
             <hr>
-            <p>&copy; {{ new Date().getFullYear() }} | Vytvoril <NuxtLink to="https://hamracek.dev" target="_blank"><u>Andrej Hamráček</u></NuxtLink></p>
+            <p>&copy; 2024 | Vytvoril <NuxtLink to="https://hamracek.dev" target="_blank"><u>Andrej Hamráček</u></NuxtLink></p>
         </footer>
     </div>
 </template>

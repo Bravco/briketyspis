@@ -2,8 +2,8 @@
     <div>
         <section id="info">
             <div>
-                <h2><span><Icon name="majesticons:cube" size="2.5rem"/></span> Specifiká</h2>
-                <p>Brikety sú <strong>vyrobené z mäkkých a tvrdých pilín</strong>.<br><strong>Paleta brikiet nahrádza 3-5 m³ dreva.<br>Vákuové balenie, vysoká výhrevnosť, výborné uskladnenie</strong></p>
+                <h2><span><Icon name="majesticons:cube" size="2.5rem"/></span> Opis</h2>
+                <p>Drevené brikety sú vyrobené z <strong>mäkkých a tvrdých pilín</strong>.<br>Lisované pod vysokým tlakom <strong>bez použitia lepidiel</strong>.<br><strong>Vákuovo balené, výborné uskladnenie, vysoká výhrevnosť.</strong></p>
             </div>
             <Placeholder style="grid-row: span 2;"/>
             <div>
@@ -15,7 +15,7 @@
             </div>
             <div>
                 <h2><span><Icon name="majesticons:car" size="2.5rem"/></span> Dovoz</h2>
-                <p>Dovoz je zabezpečený v okrese <strong>Spišská Nová Ves a okolie</strong> po dohode.</p>
+                <p>Dovoz po dohode zabezpečím <strong>Spišská Nová Ves a okolie</strong>.</p>
             </div>
             <div>
                 <h2><span><Icon name="majesticons:phone" size="2.5rem"/></span> Kontakt</h2>
@@ -25,9 +25,6 @@
                     </li>
                     <li>
                         <NuxtLink to="mailto:briketyspis@gmail.com"><strong><u>briketyspis@gmail.com</u></strong></NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="https://wa.me/+421948121289" target="_blank"><strong><u>Whatsapp</u></strong></NuxtLink>
                     </li>
                 </ul>
                 <p>V prípade otázok nás neváhajte kontaktovať.</p>
