@@ -36,12 +36,16 @@
                         <label for="address">Adresa</label>
                         <input v-model="state.address" type="text" name="address" id="address" placeholder=" " required>
                     </div>
-                    <div class="inputfield">
+                    <!--<div class="inputfield">
                         <label for="unit">Jednotka</label>
                         <select v-model="state.unit" name="unit" id="unit" placeholder=" " required>
                             <option v-if="props.packagePrice !== 0" value="Balík">Balík</option>
                             <option v-if="props.palletPrice !== 0" value="Paleta">Paleta</option>
                         </select>
+                    </div>-->
+                    <div class="inputfield">
+                        <label for="unit">Dátum</label>
+                        <input v-model="state.date" type="date" required>
                     </div>
                     <div class="inputfield">
                         <label for="quantity">Množstvo</label>
@@ -81,13 +85,14 @@
         phone: "",
         email: "",
         unit: "",
+        date: "",
         quantity: "",
         deliveryType: "",
         city: "",
         address: "",
     });
 
-    const estPrice = computed(() => {
+    const estPrice = computed<number>(() => {
         return state.quantity && state.unit
             ? (state.unit === "Paleta" ? props.palletPrice : props.packagePrice) * parseFloat(state.quantity) 
             : 0;
@@ -95,7 +100,6 @@
 
     async function submit() {
         loading.value = true;
-
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -109,7 +113,8 @@
                 meno: state.firstName + " " + state.lastName,
                 telefon: state.phone,
                 email: state.email,
-                mnozstvo: state.quantity + " (" + state.unit + ")",
+                datum: (new Date(state.date)).toDateString(),
+                mnozstvo: state.quantity + " (Paleta)",
                 doprava: state.deliveryType,
                 adresa: state.deliveryType === "Doručenie na adresu" 
                     ? (state.city + ", " + state.address) 
