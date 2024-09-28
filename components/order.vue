@@ -84,7 +84,7 @@
         lastName: "",
         phone: "",
         email: "",
-        unit: "",
+        unit: "Paleta",
         date: "",
         quantity: "",
         deliveryType: "",
@@ -114,7 +114,7 @@
                 telefon: state.phone,
                 email: state.email,
                 datum: (new Date(state.date)).toDateString(),
-                mnozstvo: state.quantity + " (Paleta)",
+                mnozstvo: state.quantity + " (" + state.unit + ")",
                 doprava: state.deliveryType,
                 adresa: state.deliveryType === "Doručenie na adresu" 
                     ? (state.city + ", " + state.address) 
