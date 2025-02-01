@@ -73,6 +73,7 @@
         width: 100%;
         position: fixed;
         background-color: var(--color-bg-primary);
+        z-index: 100;
     }
 
     nav {
@@ -80,7 +81,6 @@
         grid-template-columns: 1fr auto 1fr;
         place-items: center;
         padding-block: 1rem;
-        z-index: 100;
     }
 
     nav > *:first-child, .footer-content > *:first-child {
