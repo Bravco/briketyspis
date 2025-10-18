@@ -28,7 +28,7 @@
         </main>
         <footer>
             <div class="footer-content">
-                <Logo/>
+                <NuxtLink to="https://zemiakyspis.sk" target="_blank"><u>zemiakyspis.sk</u></NuxtLink>
                 <ul class="footer-nav-list">
                     <li>
                         <NuxtLink to="/">Domov</NuxtLink>
